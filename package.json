@@ -5,4 +5,7 @@
     "express": "latest",
     "freeport": "latest"
   },
+  "scripts": {
+    "start": "node start.js"
+  }
 }
