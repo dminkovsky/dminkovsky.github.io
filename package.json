@@ -1,4 +1,11 @@
 {
   "name": "dminkovsky.github.io",
   "version": "0.0.0",
+  "dependencies": {
+    "express": "latest",
+    "freeport": "latest"
+  },
+  "scripts": {
+    "start": "node start.js"
+  }
 }
