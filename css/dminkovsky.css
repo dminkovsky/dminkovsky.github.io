@@ -55,25 +55,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .social-icons-sprite, .social-icons-github, .social-icons-gmail, .social-icons-stack-overflow, .social-icons-tumblr, .social-icons-twitter {
-  background: url('/../images/social-icons-s2b579ff452.png') no-repeat;
+  background: url('/../images/social-icons-s910e90491c.png') no-repeat;
 }
 
 .social-icons-github {
-  background-position: 0 -530px;
-}
-
-.social-icons-gmail {
   background-position: 0 0;
 }
 
+.social-icons-gmail {
+  background-position: 0 -98px;
+}
+
 .social-icons-stack-overflow {
-  background-position: 0 -779px;
+  background-position: 0 -45px;
 }
 
 .social-icons-tumblr {
-  background-position: 0 -286px;
+  background-position: 0 -130px;
 }
 
 .social-icons-twitter {
-  background-position: 0 -633px;
+  background-position: 0 -176px;
 }
