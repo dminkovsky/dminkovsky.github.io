@@ -13,7 +13,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "oj": "https://github.com/ojjs/oj.git",
+    "oj": "https://github.com/ojjs/oj.git#latest",
     "jquery": "~2.0.3",
     "underscore-amd": "~1.5.2",
     "backbone-amd": "~1.1.0",
