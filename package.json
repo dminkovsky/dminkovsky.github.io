@@ -1,9 +1,5 @@
 {
   "name": "dminkovsky.github.io",
-  "dependencies": {
-    "express": "latest",
-    "freeport": "latest"
-  },
   "version": "0.1.0",
   "author": "Dmitry Minkovsky",
   "license": "MIT",
@@ -12,6 +8,8 @@
     "start": "node start.js"
   },
   "devDependencies": {
+    "express": "latest",
+    "freeport": "latest",
     "grunt": "latest",
     "grunt-recess": "latest",
     "grunt-contrib-concat": "latest",
