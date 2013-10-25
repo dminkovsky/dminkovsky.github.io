@@ -1,0 +1,22 @@
+{
+  "name": "dminkovsky.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dminkovsky/dminkovsky.github.io",
+  "authors": [
+    "Dmitry Minkovsky <dminkovsky@gmail.com>"
+  ],
+  "main": "dminkovsky.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "oj": "https://github.com/ojjs/oj.git#latest",
+    "jquery": "~2.0.3",
+    "underscore-amd": "~1.5.2",
+    "backbone-amd": "~1.1.0",
+    "requirejs": "~2.1.9"
+  }
+}
