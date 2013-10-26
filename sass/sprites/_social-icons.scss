@@ -1,0 +1,116 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$social-icons-sprite-base-class: ".social-icons-sprite" !default;
+$social-icons-sprite-dimensions: false !default;
+$social-icons-position: 0% !default;
+$social-icons-spacing: 0 !default;
+$social-icons-repeat: no-repeat !default;
+$social-icons-prefix: '' !default;
+$social-icons-clean-up: true !default;
+$social-icons-layout:vertical !default;
+$social-icons-inline: false !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $social-icons-github-position: $social-icons-position !default;
+   $social-icons-github-spacing:  $social-icons-spacing !default;
+   $social-icons-github-repeat:   $social-icons-repeat !default;
+ 
+   $social-icons-gmail-position: $social-icons-position !default;
+   $social-icons-gmail-spacing:  $social-icons-spacing !default;
+   $social-icons-gmail-repeat:   $social-icons-repeat !default;
+ 
+   $social-icons-stack-overflow-position: $social-icons-position !default;
+   $social-icons-stack-overflow-spacing:  $social-icons-spacing !default;
+   $social-icons-stack-overflow-repeat:   $social-icons-repeat !default;
+ 
+   $social-icons-tumblr-position: $social-icons-position !default;
+   $social-icons-tumblr-spacing:  $social-icons-spacing !default;
+   $social-icons-tumblr-repeat:   $social-icons-repeat !default;
+ 
+   $social-icons-twitter-position: $social-icons-position !default;
+   $social-icons-twitter-spacing:  $social-icons-spacing !default;
+   $social-icons-twitter-repeat:   $social-icons-repeat !default;
+ 
+
+ $social-icons-sprites: sprite-map("social-icons/*.png",
+ 
+   $social-icons-github-position: $social-icons-github-position, 
+   $social-icons-github-spacing:  $social-icons-github-spacing, 
+   $social-icons-github-repeat:   $social-icons-github-repeat,
+ 
+   $social-icons-gmail-position: $social-icons-gmail-position, 
+   $social-icons-gmail-spacing:  $social-icons-gmail-spacing, 
+   $social-icons-gmail-repeat:   $social-icons-gmail-repeat,
+ 
+   $social-icons-stack-overflow-position: $social-icons-stack-overflow-position, 
+   $social-icons-stack-overflow-spacing:  $social-icons-stack-overflow-spacing, 
+   $social-icons-stack-overflow-repeat:   $social-icons-stack-overflow-repeat,
+ 
+   $social-icons-tumblr-position: $social-icons-tumblr-position, 
+   $social-icons-tumblr-spacing:  $social-icons-tumblr-spacing, 
+   $social-icons-tumblr-repeat:   $social-icons-tumblr-repeat,
+ 
+   $social-icons-twitter-position: $social-icons-twitter-position, 
+   $social-icons-twitter-spacing:  $social-icons-twitter-spacing, 
+   $social-icons-twitter-repeat:   $social-icons-twitter-repeat,
+ 
+ $layout: $social-icons-layout,
+ $cleanup: $social-icons-clean-up
+ );
+
+
+// All sprites should extend this class
+// The social-icons-sprite mixin will do so for you.
+@if $social-icons-inline {
+  #{$social-icons-sprite-base-class} {
+    background-image: inline-sprite($social-icons-sprites);
+  } 
+} @else {
+  #{$social-icons-sprite-base-class} {
+    background: $social-icons-sprites no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function social-icons-sprite-width($name) {
+    $file: sprite_file($social-icons-sprites, $name);
+    @return image-width($file);
+  }
+
+  @function social-icons-sprite-height($name) {
+    $file: sprite_file($social-icons-sprites, $name);
+    @return image-height($file);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin social-icons-sprite-dimensions($name) {
+  @include sprite-dimensions($social-icons-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin social-icons-sprite-position($name, $offset-x: 0, $offset-y: 0) {
+  @include sprite-background-position($social-icons-sprites, $name, $offset-x, $offset-y)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin social-icons-sprite($name, $dimensions: $social-icons-sprite-dimensions, $offset-x: 0, $offset-y: 0) {
+  @extend #{$social-icons-sprite-base-class};
+  @include sprite($social-icons-sprites, $name, $dimensions, $offset-x, $offset-y)
+}
+
+@mixin social-icons-sprites($sprite-names, $dimensions: $social-icons-sprite-dimensions, $prefix: sprite-map-name($social-icons-sprites), $offset-x: 0, $offset-y: 0) {
+  @include sprites($social-icons-sprites, $sprite-names, $social-icons-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y)
+}
+
+// Generates a class for each sprited image.
+@mixin all-social-icons-sprites($dimensions: $social-icons-sprite-dimensions, $prefix: sprite-map-name($social-icons-sprites), $offset-x: 0, $offset-y: 0) {
+  @include social-icons-sprites(github gmail stack-overflow tumblr twitter, $dimensions, $prefix, $offset-x, $offset-y);
+}

@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       css: {
         src: [
           'sass/sprites.css',
-          'bootstrap/less/bootstrap.less'
+          'less/dminkovsky.github.io.less'
         ],
         dest: 'css/<%= pkg.name %>.css'
       },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         options: { compress: true },
         src: [
           'sass/sprites.css',
-          'bootstrap/less/bootstrap.less'
+          'less/dminkovsky.github.io.less'
         ],
         dest: 'css/<%= pkg.name %>.min.css'
       },
@@ -54,9 +54,9 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      recess: {
-        files: 'bootstrap/less/*.less',
-        tasks: ['recess']
+      all: {
+        files: ['bootstrap/less/*.less', 'less/dminkovsky.github.io.less', 'sass/sprites.css'],
+        tasks: ['dist-css']
       }
     }
   });

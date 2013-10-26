@@ -1,2 +1,33 @@
 @import "social-icons/*.png";
 @include all-social-icons-sprites;
+
+$screen-sm: 768px;
+
+$social-services: (stack-overflow, github, tumblr, twitter);
+
+.social-service {
+  $top: 0;
+  @each $social-service in $social-services {
+    &.#{$social-service} {
+      height: social-icons-sprite-height($social-service);
+      @media (min-width: $screen-sm){
+        margin-left: -1 * social-icons-sprite-width($social-service);
+      }
+      //top: $top;
+    }
+
+    &.#{$social-service} .icon-link {
+      @extend .social-icons-#{$social-service};
+      display: block;
+      width: social-icons-sprite-width($social-service);
+      height: social-icons-sprite-height($social-service);
+    }
+
+    &.#{$social-service} .profile-url {
+      display: block;
+      height: social-icons-sprite-height($social-service);
+    }
+
+    $top: $top + social-icons-sprite-height($social-service);
+  }
+}
