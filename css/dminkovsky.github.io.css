@@ -6,7 +6,7 @@
 .social-icons-tumblr,
 .social-icons-twitter,
 .social .urls .url {
-  background: url('/../images/social-icons-s545c827c5c.png') no-repeat;
+  background: url('/../images/social-icons-sa2e61da149.png') no-repeat;
 }
 
 .social-icons-github,
@@ -15,27 +15,27 @@
 }
 
 .social-icons-gmail {
-  background-position: 0 -98px;
+  background-position: 0 -106px;
 }
 
 .social-icons-stack-overflow,
 .social .urls .url.stack-overflow {
-  background-position: 0 -45px;
+  background-position: 0 -49px;
 }
 
 .social-icons-tumblr,
 .social .urls .url.tumblr {
-  background-position: 0 -130px;
+  background-position: 0 -138px;
 }
 
 .social-icons-twitter,
 .social .urls .url.twitter {
-  background-position: 0 -176px;
+  background-position: 0 -190px;
 }
 
 .social .urls .url.stack-overflow {
   left: -48px;
-  height: 53px;
+  height: 57px;
 }
 
 .social .urls .url.stack-overflow a {
@@ -45,7 +45,7 @@
 
 .social .urls .url.github {
   left: -48px;
-  height: 45px;
+  height: 49px;
 }
 
 .social .urls .url.github a {
@@ -55,7 +55,7 @@
 
 .social .urls .url.tumblr {
   left: -48px;
-  height: 46px;
+  height: 52px;
 }
 
 .social .urls .url.tumblr a {
@@ -65,7 +65,7 @@
 
 .social .urls .url.twitter {
   left: -48px;
-  height: 39px;
+  height: 43px;
 }
 
 .social .urls .url.twitter a {
@@ -2114,6 +2114,7 @@ td.visible-print {
 
 body > .container {
   position: relative;
+  padding-top: 15px;
   overflow: hidden;
 }
 
@@ -2167,11 +2168,32 @@ body > .container .person .social .urls .url {
   position: relative;
   display: block;
   width: 340px;
+  margin-bottom: 10px;
   cursor: pointer;
+  -webkit-transition: all 400ms cubic-bezier(1, -0.53, 0.405, 1.425);
+          transition: all 400ms cubic-bezier(1, -0.53, 0.405, 1.425);
 }
 
 body > .container .person .social .urls .url.out {
   left: -340px;
+  -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body > .container .person .social .urls .url.out.stack-overflow {
+  left: -425px;
+}
+
+body > .container .person .social .urls .url.out.github {
+  left: -350px;
+}
+
+body > .container .person .social .urls .url.out.tumblr {
+  left: -369px;
+}
+
+body > .container .person .social .urls .url.out.twitter {
+  left: -350px;
 }
 
 body > .container .person .social .urls .url a {
@@ -2183,4 +2205,7 @@ body > .container .person .social .urls .url a {
   display: table;
   width: 0;
   height: auto;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
 }

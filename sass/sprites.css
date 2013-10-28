@@ -1,5 +1,5 @@
 .social-icons-sprite, .social-icons-github, .social-icons-gmail, .social-icons-stack-overflow, .social-icons-tumblr, .social-icons-twitter, .social .urls .url {
-  background: url('/../images/social-icons-s545c827c5c.png') no-repeat;
+  background: url('/../images/social-icons-sa2e61da149.png') no-repeat;
 }
 
 .social-icons-github, .social .urls .url.github {
@@ -7,23 +7,23 @@
 }
 
 .social-icons-gmail {
-  background-position: 0 -98px;
+  background-position: 0 -106px;
 }
 
 .social-icons-stack-overflow, .social .urls .url.stack-overflow {
-  background-position: 0 -45px;
+  background-position: 0 -49px;
 }
 
 .social-icons-tumblr, .social .urls .url.tumblr {
-  background-position: 0 -130px;
+  background-position: 0 -138px;
 }
 
 .social-icons-twitter, .social .urls .url.twitter {
-  background-position: 0 -176px;
+  background-position: 0 -190px;
 }
 
 .social .urls .url.stack-overflow {
-  height: 53px;
+  height: 57px;
   left: -48px;
 }
 .social .urls .url.stack-overflow a {
@@ -31,7 +31,7 @@
   margin-left: 63px;
 }
 .social .urls .url.github {
-  height: 45px;
+  height: 49px;
   left: -48px;
 }
 .social .urls .url.github a {
@@ -39,7 +39,7 @@
   margin-left: 63px;
 }
 .social .urls .url.tumblr {
-  height: 46px;
+  height: 52px;
   left: -48px;
 }
 .social .urls .url.tumblr a {
@@ -47,7 +47,7 @@
   margin-left: 63px;
 }
 .social .urls .url.twitter {
-  height: 39px;
+  height: 43px;
   left: -48px;
 }
 .social .urls .url.twitter a {

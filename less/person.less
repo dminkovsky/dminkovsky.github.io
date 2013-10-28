@@ -32,13 +32,24 @@
         .absolute-centered-container();
         width: @width;
         cursor: pointer;
+        .transition(all 400ms cubic-bezier(1.000, -0.530, 0.405, 1.425));
+        margin-bottom: 10px;
         
         &.out {
+          .transition(all 600ms cubic-bezier(0.165, 0.84, 0.44, 1));
           left: -1*@width; 
+
+          &.stack-overflow { left: -425px; }
+          &.github { left: -350px; }
+          &.tumblr { left: -369px; }
+          &.twitter { left: -350px; }
         }
 
         a {
           .absolute-centered(0);
+          font-size: 20px;
+          font-weight: 300;
+          text-decoration: none
         }
       }
     }

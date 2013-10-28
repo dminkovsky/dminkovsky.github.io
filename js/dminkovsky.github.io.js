@@ -10,7 +10,21 @@ require.config({
 require(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
   var SocialProfiles = Backbone.Collection.extend()
     , SocialProfile = Backbone.Model.extend()
-    , SocialProfileView = Backbone.View.extend({tagName: 'li'})
+    , SocialProfileView = Backbone.View.extend({
+          tagName: 'li'
+        , initialize: function(options) {
+          }
+        , go: function(event) {
+            event.stopPropagation()
+            window.location = this.$('a').attr('href')
+          }
+        , make_out: function() {
+            this.$el.addClass('out')
+          }
+        , make_in: function() {
+            this.$el.removeClass('out')
+          }
+      })
     , socialProfiles
 
   socialProfiles = new SocialProfiles()
@@ -21,9 +35,9 @@ require(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
         el: this
       , model: socialProfile
       , events: {
-            mouseenter: function() {
-              this.$el.addClass('out')
-            }
+            'mouseenter': 'make_out'
+          , 'mouseleave': 'make_in'
+          , 'click': 'go'
         }
     })
     socialProfiles.add(socialProfile)
