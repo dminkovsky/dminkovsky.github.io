@@ -1,0 +1,46 @@
+// "Absolute Centering in CSS" <http://codepen.io/shshaw/full/gEiDt>
+.absolute-centered-container() {
+  position: relative;
+  display: block;
+}
+
+.absolute-centered(@width: 100%) {
+  position: absolute;
+  display: table;
+  height: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: @width;
+}
+
+.make-person() {
+  .make-row();
+  position: relative;
+
+  .basic {
+    .make-xs-column(12);
+    .name, .description, .email,  {
+    }
+  }
+
+  .social {
+    .make-sm-column-offset(12);
+    .urls {
+      .list-unstyled();
+      
+      .url {
+        @width: 340px;
+        .absolute-centered-container();
+        width: @width;
+        cursor: pointer;
+        
+        &.out {
+          left: -1*@width; 
+        }
+
+        a {
+          .absolute-centered(0);
+        }
+      }
+    }
+  }
+}

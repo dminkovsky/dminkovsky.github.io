@@ -1,8 +1,8 @@
-.social-icons-sprite, .social-icons-github, .social-service.github .icon-link, .social-icons-gmail, .social-icons-stack-overflow, .social-service.stack-overflow .icon-link, .social-icons-tumblr, .social-service.tumblr .icon-link, .social-icons-twitter, .social-service.twitter .icon-link {
+.social-icons-sprite, .social-icons-github, .social-icons-gmail, .social-icons-stack-overflow, .social-icons-tumblr, .social-icons-twitter, .social .urls .url {
   background: url('/../images/social-icons-s545c827c5c.png') no-repeat;
 }
 
-.social-icons-github, .social-service.github .icon-link {
+.social-icons-github, .social .urls .url.github {
   background-position: 0 0;
 }
 
@@ -10,83 +10,47 @@
   background-position: 0 -98px;
 }
 
-.social-icons-stack-overflow, .social-service.stack-overflow .icon-link {
+.social-icons-stack-overflow, .social .urls .url.stack-overflow {
   background-position: 0 -45px;
 }
 
-.social-icons-tumblr, .social-service.tumblr .icon-link {
+.social-icons-tumblr, .social .urls .url.tumblr {
   background-position: 0 -130px;
 }
 
-.social-icons-twitter, .social-service.twitter .icon-link {
+.social-icons-twitter, .social .urls .url.twitter {
   background-position: 0 -176px;
 }
 
-.social-service.stack-overflow {
+.social .urls .url.stack-overflow {
   height: 53px;
+  left: -48px;
 }
-@media (min-width: 768px) {
-  .social-service.stack-overflow {
-    margin-left: -48px;
-  }
+.social .urls .url.stack-overflow a {
+  margin: auto;
+  margin-left: 63px;
 }
-.social-service.stack-overflow .icon-link {
-  display: block;
-  width: 48px;
-  height: 53px;
-}
-.social-service.stack-overflow .profile-url {
-  display: block;
-  height: 53px;
-}
-.social-service.github {
+.social .urls .url.github {
   height: 45px;
+  left: -48px;
 }
-@media (min-width: 768px) {
-  .social-service.github {
-    margin-left: -48px;
-  }
+.social .urls .url.github a {
+  margin: auto;
+  margin-left: 63px;
 }
-.social-service.github .icon-link {
-  display: block;
-  width: 48px;
-  height: 45px;
-}
-.social-service.github .profile-url {
-  display: block;
-  height: 45px;
-}
-.social-service.tumblr {
+.social .urls .url.tumblr {
   height: 46px;
+  left: -48px;
 }
-@media (min-width: 768px) {
-  .social-service.tumblr {
-    margin-left: -48px;
-  }
+.social .urls .url.tumblr a {
+  margin: auto;
+  margin-left: 63px;
 }
-.social-service.tumblr .icon-link {
-  display: block;
-  width: 48px;
-  height: 46px;
-}
-.social-service.tumblr .profile-url {
-  display: block;
-  height: 46px;
-}
-.social-service.twitter {
+.social .urls .url.twitter {
   height: 39px;
+  left: -48px;
 }
-@media (min-width: 768px) {
-  .social-service.twitter {
-    margin-left: -48px;
-  }
-}
-.social-service.twitter .icon-link {
-  display: block;
-  width: 48px;
-  height: 39px;
-}
-.social-service.twitter .profile-url {
-  display: block;
-  height: 39px;
+.social .urls .url.twitter a {
+  margin: auto;
+  margin-left: 63px;
 }

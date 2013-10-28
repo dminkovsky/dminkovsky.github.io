@@ -1,89 +1,12 @@
 @import "../bootstrap/less/bootstrap.less";
-
+@import "person.less";
+ 
 body > .container {
   overflow: hidden;
   position: relative;
 
-  .contact {
-    .make-row();
+  .person {
+    .make-person();
   }
 }
 
-.basics {
-  .make-xs-column(12);
-
-  .email {
-    .lead();
-  }
-
-  // Small
-  // `.basics`
-  @media (min-width: @screen-sm) {
-    .make-sm-column(11);
-  }
-}
-
-.social-services {
-  .list-inline();
-  .make-xs-column(12);
-
-  .social-service {
-    //margin-left: 0;
-
-    .profile-url {
-      display: none;
-    }
-
-    // ```
-    // .icon-link {
-    //    ...
-    // }
-    // ```
-    // is styled with Compass sprites in `sass/sprites.scss`
-  }
-
-  // Small
-  // `.social-services`
-  @media (min-width: @screen-sm) {
-    .list-unstyled();
-    float: none;
-    padding-left: 0;
-    padding-right: 0;
-    position: absolute;
-    width: 400px;
-    left: 100%;
-
-    .social-service {
-      // `.top` from `sprites.css`
-      .clearfix();
-      // Reverse rules from`.list-inline() > li`
-      display: block;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 12px;
-
-      .icon-link {
-        float: left;
-      }
-
-      .profile-url {
-        position: relative;
-        display: block;
-        font-size: 20px;
-        font-weight: 300;
-        float: left;
-      }
-
-      // &.stack-overflow { .profile-url { top: 14px; } }
-      // &.github { .profile-url { top: 7px; } }
-      // &.tumblr { .profile-url { top: 7px; } }
-      // &.twitter { .profile-url { top: 3px; } }
-    }
-  }
-}
-
-.content {
-  width: 100%;
-  float: left
-}
